@@ -23,7 +23,7 @@ export const features = [
   {
     id: "agent",
     icon: "inventory-creator.svg",
-    title: "Code automatically with PearAI Agent",
+    title: "Code automatically with ThunderflowAI Agent",
     description: "Autonomous coding agent, powered by Roo Code / Cline",
     video: getAssetPath("pearai-agent-welcome.mp4"),
   },

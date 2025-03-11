@@ -285,7 +285,7 @@ export default function AIToolInventory() {
     },
     {
       id: AIToolID.AGENT,
-      name: "PearAI Agent",
+      name: "ThunderflowAI Agent",
       description: (
         <span>Autonomous coding agent with controlled IDE access.</span>
       ),
