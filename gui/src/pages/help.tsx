@@ -134,11 +134,11 @@ function HelpPage() {
   const themeType = useThemeType();
   const buttonBorders = "border-foreground-muted border-1 border-solid"
   const ideMessenger = useContext(IdeMessengerContext);
-  const [session, setSession] = useState(false); // this state specifically serves to manage "Login to PearAI" text conditionally on auth status
+  const [session, setSession] = useState(false); // this state specifically serves to manage "Login to ThunderflowAI" text conditionally on auth status
 
   // gets initial auth status
   useEffect(() => {
-    ideMessenger.request("getPearAuth", undefined).then((res) => {
+    ideMessenger.request("getPearAuth", undefined).then((res) => { // TODO: Update protocol to use getThunderflowAuth
       const newSession = res.accessToken ? true : false;
       setSession(newSession);
     });
@@ -147,7 +147,7 @@ function HelpPage() {
   // get auth status when user opens tutorial
   const handleOpenTutorial = () => {
     ideMessenger.post("showTutorial", undefined);
-    ideMessenger.request("getPearAuth", undefined).then((res) => {
+    ideMessenger.request("getPearAuth", undefined).then((res) => { // TODO: Update protocol to use getThunderflowAuth
       if (res?.accessToken) {
         navigate("/");
       } else {
@@ -179,19 +179,19 @@ function HelpPage() {
             className={`inline-flex flex-shrink-0 ${buttonBorders}`}
             themeType={themeType}
             onClick={() => {
-              ideMessenger.post("pearaiLogin", undefined);
+              ideMessenger.post("pearaiLogin", undefined); // TODO: Update protocol to use thunderflowaiLogin
               navigate("/");
             }}
           >
-            {session ? "Relogin to PearAI" : "Login to PearAI"}
+            {session ? "Relogin to ThunderflowAI" : "Login to ThunderflowAI"}
           </StyledButton>
           <StyledLink
-            href="https://trypear.ai/"
+            href="https://thunderflow.ai/"
             target="_blank"
             themeType={themeType}
             className={`${buttonBorders}`}
           >
-            PearAI Website
+            ThunderflowAI Website
           </StyledLink>
 
           <StyledButton

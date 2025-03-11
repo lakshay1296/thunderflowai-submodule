@@ -4,7 +4,7 @@ export const miscSlice = createSlice({
   name: "misc",
   initialState: {
     takenAction: false,
-    serverStatusMessage: "PearAI Server Starting",
+    serverStatusMessage: "ThunderflowAI Server Starting",
     lastControlServerBetaEnabledStatus: false,
   },
   reducers: {

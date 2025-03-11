@@ -15,7 +15,7 @@ const StatusViewLayout = ({ children }: StatusViewProps) => (
     <div className="w-full text-center flex flex-col items-center justify-center relative gap-5">
       <img
         src={getLogoPath("pearai-memory-splash.svg")}
-        alt="PearAI Memory Splash"
+        alt="ThunderflowAI Memory Splash"
       />
       {children}
     </div>
@@ -38,13 +38,13 @@ export const DisabledView = ({ hasUnsavedChanges }: { hasUnsavedChanges: boolean
   return (
     <StatusViewLayout>
       <ContentWrapper>
-        <div className="text-2xl font-['SF Pro']">PearAI Memory Disabled</div>
+        <div className="text-2xl font-['SF Pro']">ThunderflowAI Memory Disabled</div>
         <div className="opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">
           {hasUnsavedChanges ? (
             "You have unsaved changes to memories"
           ) : (
             <>
-              PearAI Memory is disabled. You can enable it in{" "}
+              ThunderflowAI Memory is disabled. You can enable it in{" "}
               <span
                 className="cursor-pointer underline"
                 onClick={() => ideMessenger.post("openInventorySettings", undefined)}
@@ -89,20 +89,20 @@ export const EmptyView = ({ onAddMemory }: { onAddMemory: () => void }) => (
       <div className="flex-1 flex absolute bottom-[260px] items-center justify-center">
         <img
           src={getLogoPath("pearai-memory-splash.svg")}
-          alt="PearAI Search Splash"
+          alt="ThunderflowAI Search Splash"
         />
       </div>
 
       <div className="w-[300px] h-[240px] absolute bottom-0 overflow-hidden flex-col justify-start items-start gap-5 inline-flex">
         <div className="flex flex-col text-left">
-          <div className="text-2xl font-['SF Pro']">PearAI Memory</div>
+          <div className="text-2xl font-['SF Pro']">ThunderflowAI Memory</div>
           <div className="h-[18px] opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">Powered by Mem0</div>
         </div>
         <div className="w-[300px] h-[140px] overflow-hidden text-left opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">
-          PearAI Memory is a self-improving memory layer when you use PearAI Chat for a personalized experience. Memories will be added automatically, and you can also add memories manually.
+          ThunderflowAI Memory is a self-improving memory layer when you use ThunderflowAI Chat for a personalized experience. Memories will be added automatically, and you can also add memories manually.
         </div>
         <div className="w-[300px] h-[100px] overflow-hidden text-left opacity-50 text-xs font-normal font-['SF Pro'] leading-[18px]">
-          No memories yet– PearAI Memory automatically remembers coding information as you use PearAI Chat.
+          No memories yet– ThunderflowAI Memory automatically remembers coding information as you use ThunderflowAI Chat.
         </div>
 
         <Button

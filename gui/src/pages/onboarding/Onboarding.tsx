@@ -22,7 +22,7 @@ function Onboarding() {
   const { completeOnboarding } = useOnboarding();
 
   useEffect(() => {
-    if (window.isPearOverlay) {
+    if (window.isThunderflowOverlay) {
       // Overlay can skip login step because user will login from sidebar
       navigate("/")
     }
@@ -32,18 +32,18 @@ function Onboarding() {
     <div className="max-w-96 mx-auto flex flex-col items-center justify-between pt-8">
       <div className="flex flex-col items-center justify-center">
       <img
-          src={`${window.vscMediaUrl}/logos/pearai-green.svg`}
+          src={`${window.vscMediaUrl}/logos/thunderflowai-green.svg`}
           height="24px"
           style={{ marginRight: "5px" }}
         />
-      <h1 className="text-center">Welcome to PearAI!</h1>
+      <h1 className="text-center">Welcome to ThunderflowAI!</h1>
       <h3 className="mx-3 text-center flex">Begin your journey by logging in</h3>
       <Button 
         variant="animated"
         size="lg"
         className="m-5 flex flex-col justify-center items-center bg-button text-button-foreground"
         onClick={() => {
-          ideMessenger.post("pearaiLogin", undefined);
+          ideMessenger.post("pearaiLogin", undefined); // TODO: Update protocol to use thunderflowaiLogin
         }}
       >
         <h3 className="font-medium">Log in</h3>
@@ -61,9 +61,9 @@ function Onboarding() {
         }}
         className="mx-3"
       >
-        Note: Having trouble logging in? Open PearAI from the dashboard on the{" "}
+        Note: Having trouble logging in? Open ThunderflowAI from the dashboard on the{" "}
         <a
-          href="https://trypear.ai/dashboard"
+          href="https://thunderflow.ai/dashboard"
           target="_blank"
           rel="noopener noreferrer"
         >

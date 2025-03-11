@@ -490,7 +490,7 @@ function GUI() {
                           <span className="flex items-center gap-2">
                             Your chat is getting lengthy, which may run slower and use tokens faster.
                             Consider starting a new chat to optimize performance and maintain better context.
-                            <Link to="command:pearai.newSession">
+                            <Link to="command:thunderflowai.newSession">
                               <Button className="min-w-20" style={{ backgroundColor: `${vscBadgeBackground}` }}>
                                 New chat
                               </Button>
@@ -518,12 +518,12 @@ function GUI() {
 
               <div className="w-full h-[700px] text-center flex flex-col items-center justify-center relative gap-5">
                 <div className="flex-1 flex absolute bottom-[260px] items-center justify-center">
-                  <img src={getLogoPath("pearai-chat-splash.svg")} alt="..." />
+                  <img src={getLogoPath("thunderflowai-chat-splash.svg")} alt="..." />
                 </div>
 
                 <div className="w-[300px] h-[240px] absolute bottom-0 overflow-hidden flex-col justify-start items-start gap-5 inline-flex">
                   <div className="flex flex-col text-left">
-                    <div className="text-2xl">PearAI Chat</div>
+                    <div className="text-2xl">ThunderflowAI Chat</div>
                     <div className="h-[18px] opacity-50 text-xs leading-[18px]">
                       Powered by Continue
                     </div>

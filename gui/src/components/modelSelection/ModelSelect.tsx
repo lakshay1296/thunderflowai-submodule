@@ -149,10 +149,10 @@ function ModelOption({
           {option.provider === 'pearai_server' ? (
             <div className="flex items-center gap-1 mr-2">
               <img
-                src={`${window.vscMediaUrl}/logos/pearai-color.png`}
+                src={`${window.vscMediaUrl}/logos/thunderflowai-chat-splash.svg`}
                 className="w-4 h-4 object-contain"
               />
-              {!option.title.toLowerCase().includes('pearai model') && <img
+              {!option.title.toLowerCase().includes('thunderflowai model') && <img
                 src={`${window.vscMediaUrl}/logos/${(() => {
                   const modelTitle = option.title.toLowerCase();
                   switch (true) {
@@ -231,7 +231,8 @@ function ModelSelect() {
         .filter((model) => {
           return (
             !model?.title?.toLowerCase().includes("creator") &&
-            !model?.title?.toLowerCase().includes("perplexity")
+            !model?.title?.toLowerCase().includes("perplexity") &&
+            !model?.title?.toLowerCase().includes("pearai")
           );
         })
         .map((model) => ({
@@ -311,10 +312,10 @@ function ModelSelect() {
               {defaultModel?.provider === 'pearai_server' ? (
                 <div className="flex flex-initial items-center">
                   <img
-                    src={`${window.vscMediaUrl}/logos/pearai-color.png`}
+                    src={`${window.vscMediaUrl}/logos/thunderflowai-chat-splash.svg`}
                     className="w-[15px] h-[15px] object-contain"
                   />
-                  {!defaultModel.title.toLowerCase().includes('pearai') && <img
+                  {!defaultModel.title.toLowerCase().includes('thunderflowai') && <img
                     src={`${window.vscMediaUrl}/logos/${(() => {
                       const modelTitle = defaultModel.title.toLowerCase();
                       switch (true) {

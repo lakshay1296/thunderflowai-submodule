@@ -267,7 +267,7 @@ const OnboardingTutorial: React.FC<OnboardingTutorialProps> = ({
       ],
     },
     {
-      title: <h3>Toggle PearAI Inventory</h3>,
+      title: <h3>Toggle ThunderflowAI Inventory</h3>,
       description: (
         <>
           <p>
@@ -276,15 +276,15 @@ const OnboardingTutorial: React.FC<OnboardingTutorialProps> = ({
               <kbd className="font-mono">{getMetaKeyAndShortcutLabel()}</kbd>
               &nbsp;<kbd className="font-mono">E</kbd>
             </b>{" "}
-            to toggle <b>PearAI Inventory</b>, and try out{" "}
+            to toggle <b>ThunderflowAI Inventory</b>, and try out{" "}
             <strong>Creator</strong> and <strong>Search</strong> directly in
             there! <br />
             <br />
             If you have questions, feel free to ask us in our{" "}
             <a href="https://discord.gg/7QMraJUsQt">Discord</a>, or through{" "}
-            <a href="mailto:pear@trypear.ai">email</a>.
+            <a href="mailto:support@thunderflow.ai">email</a>.
           </p>
-          Enjoy PearAI!
+          Enjoy ThunderflowAI!
         </>
       ),
     },
@@ -430,7 +430,7 @@ const OnboardingTutorial: React.FC<OnboardingTutorialProps> = ({
           <div className="flex flex-col justify-between mt-1">
             <div>
               <h2 className="text-lg font-semibold tracking-tight mb-0">
-                Learn how to use PearAI chat
+                Learn how to use ThunderflowAI chat
               </h2>
 
               <ContentWrapper

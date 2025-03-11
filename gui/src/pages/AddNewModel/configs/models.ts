@@ -32,18 +32,18 @@ export interface ModelPackage {
 
 export const models: { [key: string]: ModelPackage } = {
   pearai_model: {
-    title: "PearAI Model (Recommended)",
+    title: "ThunderflowAI Model (Recommended)",
     description:
-      "Experience seamless, fully-managed LLM integration with PearAI, featuring the most advanced and current best-in-market language model.",
+      "Experience seamless, fully-managed LLM integration with ThunderflowAI, featuring the most advanced and current best-in-market language model.",
     params: {
       model: "pearai_model",
       contextLength: 300_000,
-      title: "PearAI Model (Recommended)",
+      title: "ThunderflowAI Model (Recommended)",
       systemMessage:
         "You are an expert software developer. You give helpful and concise responses.",
     },
     providerOptions: ["pearai_server"],
-    icon: "pearai.png",
+    icon: "thunderflowai-chat-splash.svg",
     isOpenSource: false,
   },
   perplexity: {
@@ -58,7 +58,7 @@ export const models: { [key: string]: ModelPackage } = {
         "You are an expert software developer. You give helpful and concise responses based on latest documentation and software engineering best practices.",
     },
     providerOptions: ["perplexity"],
-    icon: "pearai.png",
+    icon: "thunderflowai-chat-splash.svg",
     isOpenSource: false,
   },
   openrouter: {

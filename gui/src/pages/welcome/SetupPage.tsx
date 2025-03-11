@@ -103,15 +103,15 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
   const tools: Tool[] = [
     // {
     //     id: "aider",
-    //     name: "PearAI Creator",
-    //     description: "PearAI Creator is a no-code tool powered by aider* that let's you build complete features with just a prompt.",
+    //     name: "ThunderflowAI Creator",
+    //     description: "ThunderflowAI Creator is a no-code tool powered by aider* that let's you build complete features with just a prompt.",
     //     icon: "inventory-creator.svg",
     //     preInstalled: false
     // },
     {
       id: "supermaven",
-      name: "PearAI Predict",
-      description: "PearAI Predict is our upcoming code autocomplete tool. While it's under development, we recommend using Supermaven* as a standalone extension within PearAI for code autocompletion. Selecting this option will install Supermaven.",
+      name: "ThunderflowAI Predict",
+      description: "ThunderflowAI Predict is our upcoming code autocomplete tool. While it's under development, we recommend using Supermaven* as a standalone extension within ThunderflowAI for code autocompletion. Selecting this option will install Supermaven.",
       icon: "inventory-autocomplete.svg",
       preInstalled: false
     }
@@ -251,8 +251,8 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
     },
     {
       icon: <Terminal className="h-6 w-6" />,
-      title: "Add PearAI To PATH",
-      description: "Easily open PearAI from the command line with 'pearai'.",
+      title: "Add ThunderflowAI To PATH",
+      description: "Easily open ThunderflowAI from the command line with 'thunderflowai'.",
       component: <AddToPath onNext={handleNextClick} pathAdded={pathAdded} />,
       platformSpecific: "mac",
       button: <Button
@@ -294,7 +294,7 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
     {
       icon: <Download className="h-6 w-6" />,
       title: "Install Additional Tools",
-      description: "Install recommended tools to enhance your PearAI experience.",
+      description: "Install recommended tools to enhance your ThunderflowAI experience.",
       component: <InstallTools onNext={handleNextClick} tools={tools} checkedTools={checkedTools} setCheckedTools={setCheckedTools} attemptedInstalls={attemptedInstalls} />,
       button: <Button
         className="text-xs font-['SF Pro']"
@@ -307,7 +307,7 @@ export default function SetupPage({ onNext }: { onNext: () => void }) {
     {
       icon: <User className="h-6 w-6" />,
       title: "Sign in",
-      description: "Have PearAI work for free out of the box by signing in.",
+      description: "Have ThunderflowAI work for free out of the box by signing in.",
       component: <SignIn onNext={handleNextClick} />,
       button: <>
         <Button

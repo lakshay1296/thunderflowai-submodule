@@ -32,8 +32,8 @@ declare global {
   interface Window {
     initialRoute?: string;
     isFirstLaunch?: boolean;
-    isPearOverlay?: boolean;
-    viewType?: 'pearai.chatView' | 'pearai.mem0View' | 'pearai.searchView';
+    isThunderflowOverlay?: boolean;
+    viewType?: 'thunderflowai.chatView' | 'thunderflowai.mem0View' | 'thunderflowai.searchView';
   }
 }
 
@@ -50,9 +50,9 @@ const router = createMemoryRouter(
         },
         {
           path: "/",
-          element: window.viewType === 'pearai.chatView' ? <GUI /> :
-                   window.viewType === 'pearai.searchView' ? <PerplexityGUI /> :
-                   window.viewType === 'pearai.mem0View' ? <Mem0SidebarGUI /> :
+          element: window.viewType === 'thunderflowai.chatView' ? <GUI /> :
+                   window.viewType === 'thunderflowai.searchView' ? <PerplexityGUI /> :
+                   window.viewType === 'thunderflowai.mem0View' ? <Mem0SidebarGUI /> :
                   <GUI />, // default to GUI if viewType is undefined or different
 
         },
@@ -63,8 +63,8 @@ const router = createMemoryRouter(
         {
           path: "/history",
           element: <History from={
-            window.viewType === 'pearai.chatView' ? 'continue' :
-            window.viewType === 'pearai.searchView' ? 'perplexity' :
+            window.viewType === 'thunderflowai.chatView' ? 'continue' :
+            window.viewType === 'thunderflowai.searchView' ? 'perplexity' :
             'continue' // default fallback
           }/>
         },
@@ -130,12 +130,12 @@ const router = createMemoryRouter(
   // TODO: Remove replace /welcome with /inventory when done testing
   {
     initialEntries: [
-      window.isPearOverlay
+      window.isThunderflowOverlay
         ? (window.isFirstLaunch ? "/welcome" : "/inventory/home")
         : window.initialRoute
     ],
     // FOR DEV'ing welcome:
-    // initialEntries: [window.isPearOverlay ? "/welcome" : window.initialRoute],
+    // initialEntries: [window.isThunderflowOverlay ? "/welcome" : window.initialRoute],
   },
 
 );

@@ -202,7 +202,7 @@ export default function AIToolInventory() {
       whenToUse: (
         <span>
           When you need to find information where recency is important. Regular
-          LLMs' knowledge are outdated by several months, whereas PearAI Search
+          LLMs' knowledge are outdated by several months, whereas ThunderflowAI Search
           is able to search the web for latest data
         </span>
       ),
@@ -285,7 +285,7 @@ export default function AIToolInventory() {
     },
     {
       id: AIToolID.AGENT,
-      name: "PearAI Agent",
+      name: "ThunderflowAI Agent",
       description: (
         <span>Autonomous coding agent with controlled IDE access.</span>
       ),
@@ -311,7 +311,7 @@ export default function AIToolInventory() {
       name: "Memory",
       description: (
         <span>
-          Personalization: let PearAI get to know your coding preferences
+          Personalization: let ThunderflowAI get to know your coding preferences
         </span>
       ),
       icon: "inventory-mem0.svg",
@@ -342,7 +342,7 @@ export default function AIToolInventory() {
       name: "Developer Wrapped",
       featureFlag: DEVELOPER_WRAPPED_FEATURE_FLAG,
       description: (
-        <span>View your year in code - only in PearAI! 🎉</span>
+        <span>View your year in code - only in ThunderflowAI! 🎉</span>
       ),
       icon: "🎁",
       whenToUse: (
